@@ -1,0 +1,20 @@
+---
+micronaut:
+  application:
+    name: test-data
+
+---
+datasources.default: {}
+---
+datasources:
+  default:
+    url: jdbc:mariadb://${db-host}/transactions?maxPoolSize=150&pool&log=true&rewriteBatchedStatements=true
+    driverClassName: org.mariadb.jdbc.Driver
+    username: ${db-user}
+    password: ${db-pwd}
+    dialect: MYSQL
+  transactions:
+    url: jdbc:mariadb://${db-host2}/transactions?maxPoolSize=150&pool&log=true&rewriteBatchedStatements=true
+    username: ${db-user}
+    password: ${db-pwd}
+    driverClassName: org.mariadb.jdbc.Driver
