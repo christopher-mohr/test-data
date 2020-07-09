@@ -19,6 +19,10 @@ class HelloController {
         this.informationCenter = informationCenter
     }
 
+    /**
+     * This is a JavaDoc test
+     * @return HttpResponse
+     */
     @Get(produces = MediaType.TEXT_PLAIN)
     HttpResponse index() {
         return HttpResponse.ok(informationCenter.getHelloContent())
